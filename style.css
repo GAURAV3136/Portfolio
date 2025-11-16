@@ -1,0 +1,185 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+    line-height: 1.5;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(20,20,20,0.9);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 18px 0;
+}
+
+.nav-container ul {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+.nav-container ul li {
+    list-style: none;
+}
+
+.nav-container ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.nav-container ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+.nav-container ul li a:hover::after {
+    width: 100%;
+}
+
+/* HEADER */
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+.profile-pic img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #ff004f;
+    object-fit: cover;
+}
+
+.header-text {
+    max-width: 500px;
+}
+
+.header-text h1 {
+    margin-top: 15px;
+    font-size: 2.6rem;
+}
+
+.header-text h1 span {
+    color: #ff004f;
+}
+
+.header-text p {
+    color: #ccc;
+}
+
+/* SECTIONS */
+section {
+    background: rgba(30,30,30,0.7);
+    margin: 40px 0;
+    padding: 40px 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.24);
+}
+
+.sub-title {
+    font-size: 2.4rem;
+    margin-bottom: 18px;
+}
+
+/* LISTS */
+ul {
+    padding-left: 18px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+/* SKILLS + TOOLS GRID */
+.skill-grid, .tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.skill-card, .tool-card {
+    background: #141414;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #292929;
+    transition: 0.3s;
+}
+
+.skill-card img, .tool-card img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+.skill-card:hover, .tool-card:hover {
+    background: #ff004f;
+    transform: translateY(-6px);
+}
+
+/* FEEDBACK FORM */
+form {
+    max-width: 480px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #232323;
+    border: none;
+    border-radius: 6px;
+    color: white;
+}
+
+form button {
+    padding: 12px 38px;
+    border: none;
+    border-radius: 30px;
+    background: #ff004f;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background: #b90038;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+}
