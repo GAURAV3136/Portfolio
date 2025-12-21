@@ -29,6 +29,12 @@ body {
     padding: 18px 0;
 }
 
+/* ADDED: remove bullets & padding from navbar ul */
+.nav-container ul {
+    list-style: none;
+    padding-left: 0;
+}
+
 .nav-container ul {
     display: flex;
     justify-content: center;
@@ -70,6 +76,11 @@ body {
     padding: 60px 0;
 }
 
+/* ADDED: header spacing */
+#header {
+    padding-top: 40px;
+}
+
 .profile-pic img {
     width: 200px;
     height: 200px;
@@ -109,6 +120,13 @@ section {
     margin-bottom: 18px;
 }
 
+/* ADDED: skill heading style */
+.skill-title {
+    font-size: 1.6rem;
+    margin-top: 20px;
+    color: #ff004f;
+}
+
 /* LISTS */
 ul {
     padding-left: 18px;
@@ -117,6 +135,16 @@ ul {
 ul li {
     margin-bottom: 8px;
     font-size: 1.1rem;
+}
+
+/* ADDED: links section anchor styling */
+#links a {
+    color: #ff004f;
+    text-decoration: none;
+}
+
+#links a:hover {
+    text-decoration: underline;
 }
 
 /* SKILLS + TOOLS GRID */
@@ -136,6 +164,14 @@ ul li {
     transition: 0.3s;
 }
 
+/* ADDED: align icon + text */
+.skill-card, .tool-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
 .skill-card img, .tool-card img {
     width: 45px;
     height: 45px;
@@ -152,6 +188,11 @@ form {
     max-width: 480px;
 }
 
+/* ADDED: form alignment */
+#feedback form {
+    margin-top: 20px;
+}
+
 form input, form textarea {
     width: 100%;
     padding: 12px;
@@ -160,6 +201,12 @@ form input, form textarea {
     border: none;
     border-radius: 6px;
     color: white;
+}
+
+/* ADDED: label spacing */
+form label {
+    display: block;
+    margin-top: 10px;
 }
 
 form button {
@@ -181,5 +228,11 @@ form button:hover {
     .header-flex {
         flex-direction: column;
         text-align: center;
+    }
+
+    /* ADDED: navbar wrap on small screens */
+    .nav-container ul {
+        flex-wrap: wrap;
+        gap: 16px;
     }
 }
